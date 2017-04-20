@@ -1,0 +1,825 @@
+  //      var age =prompt("how old are you?");
+
+    //    if (age < 18){
+        
+     //   console.log("you are too young to be clubbing");
+     //   }else if(age < 21){
+     //       
+     //   console.log("you are too young to be club and drink");
+     //   }else{
+     //       alert("you are welcome to club and drink hard");
+     //   console.log("you are too young to be club and drink hard");
+     //   };
+
+//WORKING WITH IF ELSE STATEMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+var age = prompt("please input your age : ");
+
+ if(age < 0 ){
+
+ alert("ERROR ERROR ERROR! please input correct age")
+
+}else if (age === 21){
+    alert("happy 21st birthday!!")
+}else if(Number(age)%2 !==0 ){
+     alert("your age is odd!")
+}else if(age %2 ===0){
+    alert("perfect square");
+}else{
+    alert(age);
+}
+
+
+
+
+
+
+//WORKING WITH LOOPS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+//WHILE LOOP
+
+
+
+
+
+//print all numbers between -10 and 19
+
+var num = -10;
+ 
+while (num < 19) {
+    console.log(num);
+    num++;
+}
+
+//print all even number between 10 and 40
+var num = 10;
+
+while (num < 40) {
+    if (num % 2 === 0) {
+        console.log(num);
+    }
+    num++;
+}
+
+// OR
+
+var num = 10;                    // this way there is even lesser looping than the previous
+ while (num < 40) {              // the code just loops and keeps incrementing by +2 till num is no longer less than 40
+     console.log(num);           // but in this case if begin with an odd number say 11, it ends up just adding +2 to the loop and we end up nt having even numbers
+     num+=2;
+ }
+
+
+
+//print all odd numbers between 300 and 333
+
+var num = 300;
+
+while (num < 333) {
+    if (num %2 === 1) {                        //or we could set the condition to (num % 2 !==0) which ever expression you see fit
+        console.log(num);
+    }
+    num++;
+}
+
+
+//print all numbers divisible by 5 and 3 between 5 and 50
+
+var num= 5; 
+
+while (num < 50) {
+    if (num % 5 === 0 && num % 3 === 0) {
+       console.log(num); 
+    }
+    num++;
+}
+
+
+
+
+// A LITTLE ANNOYING PROGRAM ASKING THE USER TO ENTER "YES" ANYTHING ELSE JUST KEEPS ASKING ARE WE HOME YET
+
+
+var answer = prompt("Are we home yet? ");
+
+ while (answer !== "yes" ) {
+    var answer = prompt("Are we home yet? ");                 //takes the variable and prompt the user for answer so long answer is !== "yes"
+ }
+ alert("welcome home!!");
+   
+
+
+
+
+
+// A LITTLE ANNOYING PROGRAM ASKING THE USER TO ENTER A PHRASE THAT CONTAINS THE WORD "YES" ANYTHING ELSE JUST KEEPS ASKING ARE WE HOME YET
+
+
+
+var answer = prompt("Are we home yet?");
+
+while (answer.indexOf("yes") === -1 ) {
+    var answer = prompt("Are we home yet? ");                 //takes the variable and prompt the user for answer so long answer doesnot contain the word "yes"
+ }
+ alert("welcome home!!");
+
+ 
+
+
+
+
+
+//FOR LOOPS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+//print all numbers between -10 and 19
+
+for (var i = -10; i < 19; i++) {
+    console.log(i);
+}
+
+
+
+//print all even numbers between 10 and 40
+
+
+for (var i = 10; i < 40; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+    
+}
+
+
+
+
+//print all odd numbers between 300 and 333
+
+for (var i = 300; i < 333; i++) {
+     if (i % 2 !== 0) {
+        console.log(i);
+    }
+}
+
+
+
+
+//print all numbers divisible by 5 ans 3 between 5 and 50
+
+for (var i = 5; i< 50; i++) {
+    if (i % 5 === 0 && i % 3 ===0) {
+        console.log(i);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+//WORKING WITH FUNCTIONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+// FUNCTION DECLERATION
+
+function  actionWord(verb);
+
+
+//FUNCTION EXPRESSION
+
+var actionWord = function(verb){}
+ 
+//in this case a function expression can be mixed up or changed when its variable is modified
+ //for instance 
+
+  var sayHello = function (){
+      console.log("Hello world!!");
+  }
+
+  //when the value of sayHello function is changed automatically we loose our function
+
+  sayHello = 4;        //we set the funtion to equals 4
+                     //automatically doThat becomes 4
+
+
+
+ 
+
+ //write a function isEven() takes a single numeric argument and returns true is number is even and false otherwise
+
+ function isEven(num){
+     if (num % 2 === 0) {
+         return true;
+     }else{
+         return false;
+     }
+ }
+
+ isEven(40)
+
+//or!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+
+function isEven(num){
+     return num % 2 === 0;
+}
+isEven(40)
+
+
+
+
+
+
+ //write a function factorial which takes a single numeric argument and returns the factorial 
+
+//wrong!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function fact(num){
+    
+var result = 1;  
+for (var i = 1; i <= num; i++) {
+   return num *=i;
+}
+return result;
+}
+fact(10)
+
+
+
+
+
+
+
+//function replaces character in a string and returns the replaced string
+
+
+function replacer(str){
+ var replaced = str.replace(/-/g, "_"); //using regular expression we replaced the char "-" with "_"
+ return replaced;
+}
+
+
+
+
+
+//HIGHER ORDER FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+function sayHi(){
+    console.log("Hello world!!");
+}
+
+setInterval(sayHi(), 1000);   //call the function sayHi inside of setInterval at every 2000 (2 seconds)
+
+
+//!!!!!!
+
+setInterval (function(){              //takes 2 arguments function and 2000 seconds//calls an anonymous function
+  console.log("hey its a wonderful day");                //
+
+}, 2000);                 
+
+
+
+
+
+
+
+
+//WORKING WITH ARRAYS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+
+
+
+
+// a little todo list
+
+
+alert("Choose from the following options: New, list, quit");
+var userInput = prompt("write your plans for today");                      //ask user for input
+var todoList =[];                                                            //empty array to store input
+
+
+
+   while (userInput !=="quit") {                                           //while-loop to loop through users input and checks if its not equal to quit
+       
+    if (userInput === "new") {                                             //checks if user input is "new" 
+       var newUserInput = prompt("enter new plans");                       //prompt user for new input
+       todoList.push(newUserInput);                                           //adds user input to the array
+
+    }else if(userInput === "list"){                                        //checks if user input is "list"
+        console.log(todoList);                                               //prints the list of items in the array
+    }
+    userInput = prompt("write your plans for today");                      //ask user for input again and stars the loop over 
+}
+console.log("YOU QUIT PROGRAM!!");                                         //quits program once user inputs quit
+
+
+
+
+
+
+//ARRAY ITIRATION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//USING FOR LOOP TO LOOP THROUGH AN ARRAY AND PRINT EACH ITEM TO THE CONSOLE
+
+var locations = [
+    input1 = prompt("input your favourite places"),
+    input2 = prompt("input your favourite places"),
+    input3 = prompt("input your favourite places"),
+    input4 = prompt("input your favourite places"),
+];
+
+for (var i = 0; i < locations.length; i++) {
+    console.log( locations[i]);
+    
+}
+
+
+
+
+
+
+
+
+
+
+//USING forEach TO LOOP THROUGH AN ARRAY AND PRINT EACH ITEM TO THE CONSOLE
+
+function caller(){ 
+
+var locations = [
+    input1 = prompt("input your favourite places"),
+    input2 = prompt("input your favourite places"),
+    input3 = prompt("input your favourite places"),
+    input4 = prompt("input your favourite places"),
+];
+
+locations.forEach(function(val){
+    setInterval(function(){
+     console.log(val +" is the best place to be")
+},  5000 );
+
+    })
+ 
+
+}
+caller()
+
+
+// we could use a callback function is this stance
+
+
+function caller(){ 
+
+
+function call(val){
+        setInterval(function(){
+            console.log(val +" is the best place to be")
+        },  5000 );
+
+};
+
+var locations = [
+            input1 = prompt("input your favourite places"),
+            input2 = prompt("input your favourite places"),
+            input3 = prompt("input your favourite places"),
+            input4 = prompt("input your favourite places"),
+];
+
+locations.forEach(call)                                               //here we used a call back function named "call" and passed it as argument for each item in the array 
+    
+
+}
+caller()
+
+
+
+
+
+
+
+//  TODO LIST UPDATED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+alert("Choose from the following options: New, list, quit, delete");
+var userInput = prompt("write your plans for today");                      //ask user for input
+var todoList =[];                                                            //empty array to store input
+
+
+
+ while (userInput !=="quit") {                                           //while-loop to loop through users input and checks if its not equal to quit
+       
+    if (userInput === "new") {                                             //checks if user input is "new" 
+        addToList();
+    }else if(userInput === "list"){                                        //checks if user input is "list"
+        listTodo();
+    }else if(userInput === "delete"){
+        deleteFromList();
+   
+    }
+    userInput = prompt("write your plans for today");                      //ask user for input again and stars the loop over 
+}
+console.log("YOU QUIT PROGRAM!!");                                         //quits program once user inputs quit
+
+
+
+
+function addToList(){
+         var newUserInput = prompt("enter new plans");                       //prompt user for new input
+         todoList.push(newUserInput);                                           //adds user input to the array
+         console.log("New item added to the list");
+}
+//function to list todo items
+function listTodo(){
+         todoList.forEach(function(val, i){
+         console.log(i + "-:" + val);
+        });
+}
+//function to delete todo list items
+function deleteFromList(){
+         var deleteIndex = prompt("what item idex do you want to remove from todolist");
+         var deletedItem= todoList.splice(deleteIndex, 1)
+         console.log(deletedItem + "has been deleted");
+
+}
+
+
+
+
+
+
+
+
+
+/*//function prints the reverse of an array !!!!!fix this
+
+var list = [ "is", "jesus", 55];
+var reversedItem =[];
+
+ function printReverse(item){
+               for (var i = 0 ; i >=0; i--) {
+                var popedItem = list.pop(item);
+                reversedItem.push(popedItem);
+       }
+     console.log( reversedItem);
+ }
+
+*/
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+var movie =[
+    {
+        name :  "Lord of the rings",
+        rating : " 5 stars",
+        hasWatched :true
+    },{
+        name :  "Iron man 2 ",
+        rating : " 4.5 stars",
+        hasWatched :false
+    },{
+        name :  "Beauty and the beast",
+        rating : " 5 stars",
+        hasWatched :true
+    },{
+        name :  "Fifty shades of gray ",
+        rating : " 3 stars",
+        hasWatched :false
+    }
+];
+
+movie.forEach(function(val, i) {
+     if (movie[i].hasWatched == true) {
+         console.log ("you have seen " + "\"" + movie[i].name + "\" -" + movie[i].rating );
+     }else{
+         console.log ("you have not seen " + "\"" + movie[i].name + "\" -" + movie[i].rating );
+     }
+});
+
+
+//for a cleaner code !!!! still under review
+
+
+movie.forEach(function(val) {
+     console.log(action(val));                         //call the function here
+});
+
+function action(val,i){                             //declare the function here
+
+    if (movie[i].hasWatched == true) {
+         console.log ("you have seen " + "\"" + movie[i].name + "\" -" + movie[i].rating );
+     }else{
+         console.log ("you have not seen " + "\"" + movie[i].name + "\" -" + movie[i].rating );
+     }
+}
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   FIX THIS
+
+//write a string and return the length of the shortest word
+function checker(str){
+var word = str.split(' ');
+var shortWord = 0;
+var shortestWord;
+
+function checkWord(val, i){
+for (var i = 0; i < word.length; index++) {
+    
+if(shortWord < val[i].length){
+    val[i].length = shortestWord;
+
+}
+return shortestWord.length;
+}
+
+}
+}
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+function findShort(s){
+  var arr = s.split(' ');
+  var smallest = arr[0];
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].length < smallest.length){
+      smallest = arr[i];
+    }
+  }
+  return smallest.length;
+}
+
+/////////////////////////////////////////////
+
+function findShort(s){
+var arr = s.split(" "),
+short = arr[0];
+arr.forEach(function(word){
+  if(word.length <= short.length){
+    short = word;
+  }
+})
+return short.length;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//write a string and return the length of the shortest word
+//using reduce method
+
+function checkWord (str){
+//Split the string into an array of strings
+var convertToArr = str.split(' ');
+
+var shortestWord =convertToArr.reduce(function(a, b){
+     
+        return a.length <= b.length ? a : b;
+
+     }
+);
+return shortestWord.length;
+
+}
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+//function takes an array and return the sum 
+//using reduce method
+
+
+function sumArray(elements){
+    var sum = elements.reduce(function(a, b){
+        return b + a;
+	});
+	return sum;
+}
+sumArray([2,3,2,1])
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//function accepts array of number as argument and returns the highest number
+
+
+function max(numArray){
+//Split the string into an array of strings
+var maximum =numArray.reduce(function(a, b){
+     if(b > a)
+       return b;
+    else
+       return a;
+});
+return maximum;
+}
+max([2,4,7,5,8])
+
+
+
+//!!!!!!!!!!!!!!!!!!!!
+
+//function printReverse accepts an array an print
+
+
+function isUniform(elements){
+   	for(var i = elements.length - 1; i >=0; i-- ){
+       console.log( elements[i]);
+		
+}
+
+}
+isUniform(["risen","is","king","the"])    
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+//Given an array of one's and zero's convert the equivalent binary value to an integer.
+
+//Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1
+
+var binary =[];
+function equivalent (val){
+//convert array to a string using join    
+var str = binary.join('');
+//convert string to integer use parseInt
+var integ = parseInt(str, 2);
+return integ;
+}
+
+
+
+///
+function binaryArrayToNumber(binary){
+//convert array to a string using join    
+var str = binary.join('');
+//convert string to integer use parseInt
+var num = parseInt(str, 2);
+return num;
+}
+binaryArrayToNumber()
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+////sum up the value of two arguments and returns the sum in binary
+//function accepts two arguments
+function addBinary(a,b) {  
+//sum up the value of both arguments
+var result = a+b;
+//returns the value of result converted to binary(that is in base of 2) in string format
+return (result >>> 0).toString(2);
+}
+
+
+
+
+
+
+
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. If the function is passed a valid PIN string, return true, else return false.
+
+function validatePin(num){
+var numStr = num + "";
+var numArr = numStr.split('');
+if (numArr.length === 4 || numArr.length === 6 ){
+return true;
+}else{ 
+return false;
+
+
+}
+
+}
+
+
+
+
+
+
+//or
+function validatePIN(pin) {
+  return /^(\d{4}|\d{6})$/.test(pin)
+}
+
+//or
+function validatePIN (pin) {
+  // return true or false
+  if (typeof pin === "string" && !~pin.indexOf('.') && !isNaN(Number(pin)) && (pin.length === 4 || pin.length === 6)) { 
+    return true; 
+  } else { 
+    return false; 
+  }
+}
+
+
+
+
+
+
+
+
+
+//
+
+
+//Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
+
+//The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly, and the new sum is re-invested yearly after paying tax 'T'
+
+//Note that the principal is not taxed but only the year's accrued interest
+
+Example:
+
+
+
+
+
+
+ 
+            
