@@ -808,15 +808,55 @@ function validatePIN (pin) {
 //
 
 
-//Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
+//Codewars Kata: Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
 
 //The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly, and the new sum is re-invested yearly after paying tax 'T'
 
 //Note that the principal is not taxed but only the year's accrued interest
 
-Example:
+
+function calculateYears(principal, interest, tax, desired) {
+    // your code
+    var years = 0;
+    while(principal < desired){
+      principal += (principal * interest) * (1 - tax);
+      years++;
+    }
+    return years;
+}
+
+//or
 
 
+function calculateYears(principal, interest, tax, desired) {
+   
+   // create an endless loop that will increment the number of years
+   for ( var year = 0;; year++ ) {
+   
+     // check if the principal has reached the desired amount
+     if ( principal >= desired ) {
+       return year;
+     }
+   
+     // calculate the interest for this year
+     var currentYearInterest = interest * principal;
+     
+     // calculate the tax on the interest for this year
+     var currentYearTax = currentYearInterest * tax;
+     
+     // adjust the principal to add the interest and minus the tax
+     principal = principal + currentYearInterest - currentYearTax;
+   
+   }
+   
+}
+
+
+
+
+//You are going to be given an array of integers. Your job is to take that array and find
+// an index N where the sum of the integers to the left of N is equal to the sum of the integers 
+//to the right of N. If there is no index that would make this happen, return -1.
 
 
 
