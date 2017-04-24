@@ -861,5 +861,55 @@ function calculateYears(principal, interest, tax, desired) {
 
 
 
- 
-            
+//  var arr=[];
+//  function tester(){
+//     var arrRev= arr.reverse();
+
+//     var x = arr.reduce(function(a ,b) {
+//        return a+b;
+//      });
+
+//      var y = arrRev.reduce(function(c ,d) {
+//        return c+d;
+//      }); 
+
+// var count =0;
+// function checkIndx() {
+//     for (var i = 0; i < arr.length; index++) {
+//         var element = array[index];
+        
+//     }
+    
+// }
+
+
+
+
+
+//fix this code 
+
+ function tester(){
+     var count =0;
+     var arr=[3,4,2,1,5,6,7];
+    var arrRev = arr.reverse();
+
+    
+function loopy(){
+
+for (var i = 0; i < arr.length; i++) {
+     var x = arr.reduce(function(a ,b) {
+       return b+a;
+     });
+     var y = arrRev.reduce(function(c ,d) {
+        return d+c;
+        });
+    }
+
+count++;
+}
+
+
+
+
+
+}         
