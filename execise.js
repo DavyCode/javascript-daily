@@ -858,58 +858,40 @@ function calculateYears(principal, interest, tax, desired) {
 // an index N where the sum of the integers to the left of N is equal to the sum of the integers 
 //to the right of N. If there is no index that would make this happen, return -1.
 
+//
+
+function findEvenIndex(arr) {
+    //code goes here!!
+    var result = -1;
+    for (var i =1; i< arr.length; i++){
+        var leftSum = arr.slice(0, i).reduce(function(prev, next){
+            return prev + next;
+        }, 0);
+
+        var rightSum =arr.slice(i + 1).reduce(function(prev, next){
+            return prev + next;
+        }, 0);
+        if (rightSum === leftSum){
+            result = i;
+            break;
+        }
+    }
+    return result;
+}
 
 
 
-//  var arr=[];
-//  function tester(){
-//     var arrRev= arr.reverse();
+// OR
 
-//     var x = arr.reduce(function(a ,b) {
-//        return a+b;
-//      });
-
-//      var y = arrRev.reduce(function(c ,d) {
-//        return c+d;
-//      }); 
-
-// var count =0;
-// function checkIndx() {
-//     for (var i = 0; i < arr.length; index++) {
-//         var element = array[index];
+function findEvenIndex(arr) {        
+    var rightSum = arr.reduce((acc, val) => acc + val, 0), leftSum = 0;
+    
+    for (var i = 0; i < arr.length; i++) {
+            rightSum -= arr[i];  // rightSum = rightSum - arr[i]
+        if (rightSum === leftSum) 
+            return i; 
+        leftSum += arr[i];  // leftSum = leftSum + arr[i]
+        }
         
-//     }
-    
-// }
-
-
-
-
-
-// //fix this code 
-
-//  function tester(){
-//      var count =0;
-//      var arr=[3,4,2,1,5,6,7];
-//     var arrRev = arr.reverse();
-
-    
-// function loopy(){
-
-// for (var i = 0; i < arr.length; i++) {
-//      var x = arr.reduce(function(a ,b) {
-//        return b+a;
-//      });
-//      var y = arrRev.reduce(function(c ,d) {
-//         return d+c;
-//         });
-//     }
-
-// count++;
-// }
-
-
-
-
-
-// }         
+    return -1;
+} 
