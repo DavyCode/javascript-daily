@@ -867,7 +867,6 @@ function findEvenIndex(arr) {
         var leftSum = arr.slice(0, i).reduce(function(prev, next){
             return prev + next;
         }, 0);
-
         var rightSum =arr.slice(i + 1).reduce(function(prev, next){
             return prev + next;
         }, 0);
@@ -885,13 +884,11 @@ function findEvenIndex(arr) {
 
 function findEvenIndex(arr) {        
     var rightSum = arr.reduce((acc, val) => acc + val, 0), leftSum = 0;
-    
-    for (var i = 0; i < arr.length; i++) {
+     for (var i = 0; i < arr.length; i++) {
             rightSum -= arr[i];  // rightSum = rightSum - arr[i]
         if (rightSum === leftSum) 
             return i; 
-        leftSum += arr[i];  // leftSum = leftSum + arr[i]
+            leftSum += arr[i];  // leftSum = leftSum + arr[i]
         }
-        
-    return -1;
+       return -1;
 } 
