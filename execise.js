@@ -929,7 +929,6 @@ function createPhoneNumber(numbers){
 	var last = numbers.slice(6).join('');
 	return "("+first+")"+" "+middle+"-"+last;
 }
-
 createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 
 
