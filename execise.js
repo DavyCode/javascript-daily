@@ -982,3 +982,34 @@ function createPhoneNumber(numbers){
 
 // If a string contains all repeating characters, it should return the empty string ("").
 
+
+//accept a string
+//loop through string
+
+	function firstNonRepeatedCharacter(string) {
+    var first;
+
+    string.split('').some(function (character, index, obj) {
+        if(obj.indexOf(character) === obj.lastIndexOf(character)) {
+            first = character;
+            return true;
+        }
+
+        return false;
+    });
+
+    return first;
+}
+
+console.log(firstNonRepeatedCharacter('aabcbd'));
+
+
+//OR
+
+function firstNonRepeatedCharacter(string) {
+    return string.split('').filter(function (character, index, obj) {
+        return obj.indexOf(character) === obj.lastIndexOf(character);
+    }).shift();
+}
+
+console.log(firstNonRepeatedCharacter('aabcbd'));
