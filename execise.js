@@ -1004,7 +1004,7 @@ function createPhoneNumber(numbers){
 console.log(firstNonRepeatedCharacter('aabcbd'));
 
 
-//OR
+// OR
 
 function firstNonRepeatedCharacter(string) {
     return string.split('').filter(function (character, index, obj) {
