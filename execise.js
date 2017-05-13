@@ -1022,8 +1022,7 @@ function sortArray(array) {
       if (val % 2 !== 0) {
           return val;
       }
-  })
-  var sortedOddArray = oddArray.sort(function(a, b) {
+  }).sort(function(a, b) {
       return a - b;
   });
 
