@@ -1013,3 +1013,25 @@ function firstNonRepeatedCharacter(string) {
 }
 
 console.log(firstNonRepeatedCharacter('aabcbd'));
+
+// sort array for odd numbers and output the array in ascending order without displacing the even numbers indexes
+
+function sortArray(array) {
+  // Return a sorted array.
+  var oddArray = array.filter(function(val) {
+      if (val % 2 !== 0) {
+          return val;
+      }
+  })
+  var sortedOddArray = oddArray.sort(function(a, b) {
+      return a - b;
+  });
+
+  var i = 0;
+  return array.map(function(val) {
+      if(val % 2 === 0) {
+          return val;
+      }
+      return sortedOddArray[i++];
+  })
+}
