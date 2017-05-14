@@ -1018,7 +1018,7 @@ console.log(firstNonRepeatedCharacter('aabcbd'));
 
 function sortArray(array) {
   // Return a sorted array.
-  var oddArray = array.filter(function(val) {
+  var sortedOddArray = array.filter(function(val) {
       if (val % 2 !== 0) {
           return val;
       }
@@ -1034,3 +1034,22 @@ function sortArray(array) {
       return sortedOddArray[i++];
   })
 }
+
+
+
+//OR 
+function sortArray(arr) {
+//sort odd array
+var filSort = arr.filter((n)=> n%2 !==0 
+    ).sort((a, b) => a-b);
+
+  return arr.map((n) => {
+      return n % 2 === 0? n:  filSort.shift();
+  })
+}
+
+
+
+
+
+
