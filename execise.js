@@ -1039,12 +1039,12 @@ function sortArray(array) {
 
 //OR 
 function sortArray(arr) {
-//sort odd array
-var filSort = arr.filter((n)=> n%2 !==0 
-    ).sort((a, b) => a-b);
+    //sort odd array
+    var filSort = arr.filter((n)=> n%2 !==0 
+     ).sort((a, b) => a-b);
 
-  return arr.map((n) => {
-      return n % 2 === 0? n:  filSort.shift();
+      return arr.map((n) => {
+       return n % 2 === 0? n:  filSort.shift();
   })
 }
 
