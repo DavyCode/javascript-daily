@@ -1073,14 +1073,14 @@ alert("Welcome. The next few pop ups will ask a few questions. Good luck!");
 var score = 0; // keeps track of the correct answers entered by the player
 
 // question 1
-var answer1 = prompt("What year did the 13 colonies declare indepence from Great Britian?");
+let answer1 = prompt("What year did the 13 colonies declare indepence from Great Britian?");
 if ( parseInt(answer1) === 1776 ) {
   score = score + 1;
 
 alert("That is correct! You have answered " + score + " out 5 questions correctly so far!");
 } else {
   
- alert("Your answer is incorrect. You have have answered " + score + " out of 5 questions correctly so far.");
+ alert("Your answer is incorrect. You have answered " + score + " out of 5 questions correctly so far.");
 }
 
 
