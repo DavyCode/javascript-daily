@@ -1053,3 +1053,100 @@ function sortArray(arr) {
 
 
 
+
+
+
+/* create a quiz app
+1. it must ask 5 questions
+2. keep track of how many questions the user answered correctly
+3. provide a message after the quiz letting the user know the # of questions they got right
+4. rank the player - if they answered all
+  5 correct answers is a "gold crown"
+  3-4 correct answers is a "silver crown"
+  1-2 correct answers is a "bronze crown"
+  0 correct answers is no crown */
+
+// START OF PROGRAM CODE
+
+alert("Welcome. The next few pop ups will ask a few questions. Good luck!");
+
+var score = 0; // keeps track of the correct answers entered by the player
+
+// question 1
+var answer1 = prompt("What year did the 13 colonies declare indepence from Great Britian?");
+if ( parseInt(answer1) === 1776 ) {
+  score = score + 1;
+
+alert("That is correct! You have answered " + score + " out 5 questions correctly so far!");
+} else {
+  
+ alert("Your answer is incorrect. You have have answered " + score + " out of 5 questions correctly so far.");
+}
+
+
+// question 2
+var answer2 = prompt("What programing language is named after a gem?");
+if ( answer2.toUpperCase() === 'RUBY' ) {
+  score = score + 1;
+  
+alert("That is correct! You have answered " + score + " out 5 questions correctly so far!");
+} else {
+  
+ alert("Your answer is incorrect. You have have answered " + score + " out of 5 questions correctly so far.");
+}
+
+
+// question 3
+var answer3 = prompt("What color is the sky?");
+if ( answer3.toUpperCase() === 'BLUE' ) {
+  score = score + 1;
+  
+alert("That is correct! You have answered " + score + " out 5 questions correctly so far!");
+} else {
+  
+ alert("Your answer is incorrect. You have have answered " + score + " out of 5 questions correctly so far.");
+}
+
+
+// question 4
+var answer4 = prompt("2 + 2 = ?");
+if ( parseInt(answer4) === 4 ) {
+  score = score + 1;
+  
+alert("That is correct! You have answered " + score + " out 5 questions correctly so far!");
+} else {
+  
+ alert("Your answer is incorrect. You have have answered " + score + " out of 5 questions correctly so far.");
+}
+
+
+// question 5
+var answer5 = prompt("How many US presidents have we had?");
+if ( parseInt(answer5) === 45 ) {
+  score = score + 1;
+  
+alert("That is correct! You have answered " + score + " out 5 total questions.");
+} else {
+  
+ alert("Your answer is incorrect. You have have answered " + score + " out of 5 total questions.");
+}
+
+
+// crowns
+if ( score === 5 ) {
+  alert("You finished the quiz! You got " + score + " out of 5 questions correct! You receive the gold crown!");
+} else if ( score >= 3 && score < 5) {
+  alert("You finished the quiz! You got " + score + " out of 5 questions correct! You receive the silver crown!");
+} else if ( score >= 1 && score < 3 ) {
+  alert("You finished the quiz! You got " + score + " out of 5 questions correct! You receive the bronze crown!");
+} else {
+  alert("You finished the quiz! You got " + score + " out of 5 questions correct! I'm sorry, you don't recieve a crown. :(");
+}
+
+
+// IT WORKS! I can't believe it. I don't know if it's the best way to code it but it works. i decided to code in longhand even though I know I could use 
+// the shorthand *score += 1;* simply because I still forget how to update variables lol.
+
+
+
+
