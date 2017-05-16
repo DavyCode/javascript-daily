@@ -1146,5 +1146,52 @@ if ( score === 5 ) {
 // the shorthand *score += 1;* simply because I still forget how to update variables lol.
 
 
+function checker (arr){
+   arr.reduce(function(a, b){
+         if (a ===b){
+             return a;
+         }
+         
+   })
+}
+
+
+
+function checker(arr){
+  for(i =0; i < arr.length - 1; i++){
+    if (arr[i] != arr[i+1]){
+        return false;            
+    }else{
+        return i;
+    }
+}
+
+
+
+function checker(arr) {
+    var first = arr[0];
+    return arr.every(function(n) {
+        if( n === first){
+           
+        }
+        (true)? first : NaN;
+    });
+}
+
+
+
+
+
+function check (arr){
+    // var first = arr[0];
+    //     return arr.every(function(n) {
+    //         return n === first;
+    //     })
+      function checker() {
+         (check() === true)? first : NaN;
+     }
+
+    } 
+
 
 
