@@ -1172,14 +1172,10 @@ function checker(arr) {
     var first = arr[0];
     return arr.every(function(n) {
         if( n === first){
-           
-        }
+      }
         (true)? first : NaN;
     });
 }
-
-
-
 
 
 function check (arr){
