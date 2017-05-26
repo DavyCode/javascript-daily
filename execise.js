@@ -11,7 +11,7 @@
      //   console.log("you are too young to be club and drink hard");
      //   };
 
-//WORKING WITH IF ELSE STATEMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//WORKING WITH IF ELSE STATEMENT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 var age = prompt("please input your age : ");
@@ -274,7 +274,6 @@ function replacer(str){
 
 
 
-
 //HIGHER ORDER FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
@@ -347,10 +346,6 @@ for (var i = 0; i < locations.length; i++) {
     console.log( locations[i]);
     
 }
-
-
-
-
 
 
 
