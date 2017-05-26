@@ -1110,8 +1110,7 @@ if ( parseInt(answer5) === 45 ) {
   
 alert("That is correct! You have answered " + score + " out 5 total questions.");
 } else {
-  
- alert("Your answer is incorrect. You have have answered " + score + " out of 5 total questions.");
+   alert("Your answer is incorrect. You have have answered " + score + " out of 5 total questions.");
 }
 
 
