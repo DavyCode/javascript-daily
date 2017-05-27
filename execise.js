@@ -362,10 +362,7 @@
           setInterval(function() {
               console.log(val + " is the best place to be")
           }, 5000);
-
       })
-
-
   }
   caller()
 
