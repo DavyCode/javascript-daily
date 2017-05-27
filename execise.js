@@ -260,8 +260,6 @@
 
 
 
-
-
   //function replaces character in a string and returns the replaced string
 
 
@@ -269,7 +267,6 @@
       var replaced = str.replace(/-/g, "_"); //using regular expression we replaced the char "-" with "_"
       return replaced;
   }
-
 
 
 
