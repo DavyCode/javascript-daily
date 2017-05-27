@@ -357,7 +357,6 @@
           input3 = prompt("input your favourite places"),
           input4 = prompt("input your favourite places"),
       ];
-
       locations.forEach(function(val) {
           setInterval(function() {
               console.log(val + " is the best place to be")
