@@ -595,13 +595,6 @@
 
 
 
-
-
-
-
-
-
-
   //write a string and return the length of the shortest word
   //using reduce method
 
