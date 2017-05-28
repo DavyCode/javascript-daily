@@ -408,7 +408,6 @@
   var todoList = []; //empty array to store input
 
 
-
   while (userInput !== "quit") { //while-loop to loop through users input and checks if its not equal to quit
 
       if (userInput === "new") { //checks if user input is "new" 
