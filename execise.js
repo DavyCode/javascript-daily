@@ -651,9 +651,24 @@
 
 
 
+
+  //-----------------
+  function max(arr) {
+      var result = arr.reduce((a, b) => {
+          if (b > a)
+              return b;
+          else
+              return a;
+      });
+      return result;
+  }
+  max([2, 6, 3, 2767, 8])
+
+
+
   //!!!!!!!!!!!!!!!!!!!!
 
-  //function printReverse accepts an array an print
+  //function printReverse accepts an array an prints the reverse
 
 
   function isUniform(elements) {
