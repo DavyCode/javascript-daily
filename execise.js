@@ -1182,9 +1182,62 @@
 
 
 
-//       // function solution(digits){
+function solution(digits) {
+    console.log(digits);
+    var content = [];
+    for (var i = 0; i < digits.length + 1; i++) {
+        // console.log(i);
+        Number(digits.slice(i, 5));
+    }
 
-//       // }
+    var result = content.reduce((a, b) => {
+        (b > a) ? b: a;
+    });
+    return result;
+
+}
+
+
+
+function solution(digits) {
+    console.log(digits);
+
+    for (var i = 0; i < digits.length + 1; i++) {
+        // console.log(i);
+        console.log(Number(digits.slice(i, 5)));
+    }
+
+
+
+}
+
+
+
+function solution(digits) {
+    console.log(digits);
+    var num = [];
+    num.push(digits.slice(0, 5));
+    for (var i = 1; i < digits.length + 1; i++) {
+        // console.log(i);
+        num.push(Number(digits.slice(i, i += 5)));
+    }
+    console.log(num)
+
+
+}
+
+function solution(digits) {
+    console.log(digits);
+    var num = [];
+    num.push(digits.slice(0, 5));
+    for (var i = 1; i < digits.length + 1; i++) {
+        // console.log(i);
+        num.push(Number(digits.slice(i, i += 5)));
+    }
+    console.log(num)
+
+
+}
 
 
 
