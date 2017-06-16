@@ -1093,31 +1093,19 @@
 //       // found within the number given.. The number will be passed in as a string of only digits. It should 
 //       // return a five digit integer. The number passed may be as large as 1000 digits. 
 
-function solution(digits) {
-    var num = [];
-    for (var i = 0; i < digits.length - 4; i++) {
-        num.push(Number(digits.slice(i, i + 5)));
-    }
-    var result = num.reduce((a, b) => {
-        return (b > a) ? b : a;
-    }, 0);
-    return result;
-}
-solution('6736839936535')
+// function solution(digits) {
+//     var num = [];
+//     for (var i = 0; i < digits.length - 4; i++) {
+//         num.push(Number(digits.slice(i, i + 5)));
+//     }
+//     var result = num.reduce((a, b) => {
+//         return (b > a) ? b : a;
+//     }, 0);
+//     return result;
+// }
+// solution('6736839936535')
 
 
-
-
-
-
-//   function checker(arr) {
-//       for (i = 0; i < arr.length - 1; i++) {
-//           if (arr[i] != arr[i + 1]) {
-//               return false;
-//           } else {
-//               return i;
-//           }
-//       }
 
 
 
